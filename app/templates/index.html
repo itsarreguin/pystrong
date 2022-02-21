@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pystrong | Generate a safe password</title>
+    <title>Pystrong | Password generator</title>
     {% block content %}
-        {% include "components/tags.html" %}
+        {% include "components/_tags.html" %}
     {% endblock %}
 </head>
 <body>
     {% block navbar %}
-        {% include "components/navbar.html" %}
+        {% include "components/_navbar.html" %}
     {% endblock %}
     
-    <h1>Hello Python World</h1>
+    <div class="grid">
+        <section class="grid-element grid-element-primary"></section>
+
+        <section class="grid-element grid-element-secondary">
+            {% block form %}
+                {% include 'components/_form.html' %}
+            {% endblock %}
+        </section>
+    </div>
 </body>
 </html>

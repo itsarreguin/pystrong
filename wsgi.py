@@ -6,8 +6,13 @@ app = pystrong()
 
 
 @app.route('/')
-def hello():
+def index():
     render = render_template('index.html')
+    return render
+
+@app.errorhandler(404)
+def not_found(error):
+    render = render_template('404.html', error=error)
     return render
 
 
