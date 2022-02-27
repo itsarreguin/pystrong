@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pystrong | 404 not found</title>
+    {% block content %}
+        {% include "components/_tags.html" %}
+    {% endblock %}
+{% endblock %}
+<body>
+    <div class="full-container flex center-x center-y">
+        <section="error-content flex">
+            {% block title %}
+                <h2 class="heading-2 error-h2">404 | Page not found</h2>
+            {% endblock %}
+        </section>
+    </div>
+</body>
+</html>

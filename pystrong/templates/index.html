@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block tile %}Pystrong{% endblock %} | Password generator</title>
+    {% block content %}
+        {% include "components/_tags.html" %}
+    {% endblock %}
+{% endblock %}
+<body>
+    {% block navbar %}
+        {% include "components/_navbar.html" %}
+    {% endblock %}
+    
+    <div class="grid">
+        {% block inside %}
+            <section class="grid-element grid-element-primary"></section>
+
+            <section class="grid-element grid-element-secondary">
+                {% block form %}
+                    {% include 'components/_form.html' %}
+                {% endblock %}
+            </section>
+        {% endblock %}
+    </div>
+</body>
+</html>
