@@ -9,22 +9,20 @@
         {% include "includes/_tags.html" %}
     {% endblock %}
 {% endblock %}
-<body>
+{% block body %}
     {% block navbar %}
         {% include "includes/_navbar.html" %}
     {% endblock %}
     
 
     <div class="grid">
-        {% block inside %}
-            <section class="grid-element grid-element-primary"></section>
+        <section class="grid-element grid-element-primary"></section>
 
-            <section class="grid-element grid-element-secondary">
-                {% block form %}
-                    {% include 'includes/_password.html' %}
-                {% endblock %}
-            </section>
-        {% endblock %}
+        <section class="grid-element grid-element-secondary flex center-x center-y">
+            {% block form %}
+                {% include 'includes/_password.html' %}
+            {% endblock %}
+        </section>
     </div>
-</body>
+{% endblock %}
 </html>

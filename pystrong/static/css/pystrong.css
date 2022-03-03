@@ -12,6 +12,21 @@ a {
     text-decoration: none;
 }
 
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.left-0 {
+    left: 0;
+}
+.right-0 {
+    right: 0;
+}
+
 .flex {
     display: flex;
 }
@@ -21,6 +36,9 @@ a {
 }
 .center-x {
     justify-content: center;
+}
+.between {
+    justify-content: space-between;
 }
 
 .navbar{
@@ -35,25 +53,25 @@ a {
     width: 100%;
     display: grid;
     height: 100vh;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 34% 66%;
     grid-template-rows: auto;
 }
 
 .grid-element-primary {
-    width: 40%;
-    height: 100%;
     background-color: #08090D;
 }
 
-.grid-element-secondary {
-    width: 60%;
-    height: 100vh;
-    background-color: #888;
-}
 
-h1, h2, h3, h4, h5, h6, a, span {
+h1, h2, h3, h4, h5, h6, a, span, button{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFFFF;
+}
+
+button, input{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: 0px;
 }
 
 h2 {
@@ -77,6 +95,78 @@ h2 {
 .full-container {
     width: 100%;
     height: 100vh;
+}
+
+.form-group {
+    width: 500px;
+}
+
+.password-container {
+    height: 65px;
+    border-radius: 6px;
+    margin-bottom: 38px;
+    /* background: rgba(10, 11, 15, 0.8); */
+    backdrop-filter: blur(10px);
+}
+
+.get-password {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    padding: 0px 0px 0px 20px;
+    content: "Your next strong password";
+    color: #808080;
+}
+
+.form-btn {
+    height: 100%;
+    padding: 0px 15px;
+    fill: #FFFFFF;
+}
+.form-btn svg {
+    width: 20px;
+}
+
+.btn {
+    padding: 12px 60px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-light {
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    color: #0A0B0F;
+    font-size: 16px;
+}
+.btn-light:hover {
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.btn-light-outline {
+    border: 2px solid #FFFFFF;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.btn-icon svg {
+    width: 16px;
+    fill: #FFFFFF;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-light-outline:hover {
+    background: #FFFFFF;
+    color: #0A0B0F;
+}
+.btn-light-outline:hover .btn-icon svg{
+    fill: #0A0B0F;
 }
 
 .error-content {
