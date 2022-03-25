@@ -31,14 +31,19 @@ a {
     display: flex;
 }
 
-.center-y {
+.flex-y {
     align-items: center;
 }
-.center-x {
+.flex-x {
     justify-content: center;
 }
 .between {
     justify-content: space-between;
+}
+
+.fullview {
+    width: 100%;
+    height: 100vh;
 }
 
 .navbar{

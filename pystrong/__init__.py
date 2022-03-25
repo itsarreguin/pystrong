@@ -9,7 +9,8 @@ def create_app():
     # General blueprint
     from pystrong.views import general
     app.register_blueprint(general.mod)
-    
+
+
     @app.errorhandler(404)
     def not_found(error):
         render = render_template('404.html', error=error)
