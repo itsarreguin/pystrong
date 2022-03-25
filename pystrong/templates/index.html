@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-{% block head %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Pystrong{% endblock %} | Password generator</title>
-    {% block content %}
-        {% include "includes/_tags.html" %}
-    {% endblock %}
+{% extends 'layout.html' %}
+{% block title %}
+    {{ super() }}
 {% endblock %}
-{% block body %}
-    {% block navbar %}
-        {% include "includes/_navbar.html" %}
-    {% endblock %}
+
+{% block content %}
     
-
-    <div class="grid">
-        <section class="grid-element grid-element-primary"></section>
-
-        <section class="grid-element grid-element-secondary flex center-x center-y">
-            {% block form %}
-                {% include 'includes/_password.html' %}
-            {% endblock %}
-        </section>
-    </div>
 {% endblock %}
-</html>
