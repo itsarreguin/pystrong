@@ -4,7 +4,7 @@ from time import sleep
 import random
 
 
-mod = Blueprint('general', __name__)
+mod = Blueprint('main', __name__)
 
 
 @mod.route('/', methods=('GET', 'POST'))
