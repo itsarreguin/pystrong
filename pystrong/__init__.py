@@ -3,12 +3,13 @@ from flask import Flask, render_template
 
 def create_app():
     app = Flask(__name__)
+    app.secret_key = 'sa6s46as465a48as51'
     app.config.update(ENV='development', DEBUG=True)
 
 
     # General blueprint
-    from pystrong.views import general
-    app.register_blueprint(general.mod)
+    from pystrong.views import main
+    app.register_blueprint(main.mod)
 
 
     @app.errorhandler(404)
