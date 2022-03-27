@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, redirect
 from flask import render_template, url_for, flash, request
 from time import sleep
 import random
@@ -40,5 +40,6 @@ def index():
             password.clear()
 
         flash(password)
+        return redirect(url_for('main.index'))
 
     return render_template('main/index.html')
