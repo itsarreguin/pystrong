@@ -42,4 +42,4 @@ def index():
         flash(password)
         return redirect(url_for('main.index'))
 
-    return render_template('main/index.html')
+    return render_template('main/index.html.jinja')

@@ -1,10 +1,10 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html.jinja' %}
 {% block title %}
-    {{ super() }} - 404 Not Found
+    {{ super() }} - Password generator
 {% endblock %}
 
 {% block content %}
     <div class="fullview flex flex-x flex-y">
-        <h2 class="">404 | Page not found</h2>
+        {% include 'includes/_password.html' %}
     </div>
 {% endblock %}
